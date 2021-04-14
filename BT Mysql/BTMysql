@@ -1,0 +1,38 @@
+Câu 1:
+SELECT gv.Magv, gv.Hotengv, khoa.Tenkhoa
+FROM TBLGiangVien AS gv 
+LEFT JOIN TBLKhoa AS khoa 
+ON gv.MaKhoa = khoa.MaKhoa;
+
+Câu 2:
+SELECT gv.Magv, gv.Hotengv, khoa.Tenkhoa
+FROM TBLGiangVien AS gv 
+LEFT JOIN TBLKhoa AS khoa 
+ON gv.MaKhoa = khoa.MaKhoa
+WHERE gv.MaKhoa = 'Geo';
+
+Câu 3:
+SELECT COUNT(Magv) AS SoSV 
+FROM TBLGiangVien 
+WHERE Makhoa = 'Bio';
+
+Câu 4:
+SELECT Masv, Hotensv, (SELECT YEAR(CURDATE()) - Namsinh) AS Tuoi
+FROM TBLSinhVien
+WHERE Makhoa = 'Math';
+
+Câu 5:
+SELECT COUNT(Magv) 
+AS SoGV 
+FROM TBLGiangVien
+WHERE MaKhoa = 'Bio';
+
+Câu 6:
+
+Câu 7:
+SELECT Khoa.Makhoa, Khoa.TenKhoa, COUNT(*) AS T
+FROM TBLKhoa AS Khoa
+LEFT JOIN TBLGiangVien AS GV
+ON Khoa.Makhoa = GV.Makhoa;
+
+https://www.paste.org/116336?fbclid=IwAR0xXJp858y_g4-SvyCYlZ9xlPIzwSm6f5DhmQpSomsUkSBrSNt67XiTfI4
